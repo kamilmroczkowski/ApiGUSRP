@@ -1,0 +1,21 @@
+﻿<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://CIS/BIR/PUBL/2014/07">
+  <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsrm="http://docs.oasis-open.org/ws-rx/wsrm/200702">
+    <wsrm:Sequence>
+      <wsrm:Identifier>
+        s:Sender
+
+        a:ActionNotSupported
+      </wsrm:Identifier>
+      <wsrm:MessageNumber>1</wsrm:MessageNumber>
+    </wsrm:Sequence>
+    <wsa:Action>http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/Wyloguj</wsa:Action>
+    <wsa:MessageID>uuid:%uid%</wsa:MessageID>
+    <wsa:To>https://wyszukiwarkaregon.stat.gov.pl/wsBIR/UslugaBIRzewnPubl.svc</wsa:To>
+  </soap:Header>
+  <soap:Body>
+    <ns:Wyloguj>
+      <!--Optional:-->
+      <ns:pIdentyfikatorSesji>%sid%</ns:pIdentyfikatorSesji>
+    </ns:Wyloguj>
+  </soap:Body>
+</soap:Envelope>
